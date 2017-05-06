@@ -65,7 +65,7 @@ google-chrome-canary [--headless] --disable-gpu --remote-debugging-port=9222
 
 Using `--headless` will allow a server to run the instance of the browser, or simply on your desktop without showing a actual browser. No **xvfb** needed !
 
-####Noteable mentions:
+#### Noteable mentions:
 
 * It seems at the moment Chrome only allows connections from `localhost`, (being carefull off course) you can open up to a ip using a reverse proxy like NGINX. See [samples/nginx.conf](https://github.com/passmarked/browser/blob/master/samples/nginx.conf) for a sample NGINX config.
 * For security reasons Chrome does not return the amount of memory being used precisely, to enable and use the `page.getMemory()` function add `--enable-precise-memory-info`.
