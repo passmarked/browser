@@ -6,6 +6,22 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.org:passmarked/browser.git"
+  },
+  "keywords": [
+    "passmarked",
+    "chrome",
+    "devtools",
+    "protocol",
+    "standards",
+    "browser",
+    "headless",
+    "remote",
+    "har",
+    "screenshot"
+  ],
   "author": "Passmarked <info@passmarked.com>",
   "license": "Apache-2.0",
   "dependencies": {
