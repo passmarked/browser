@@ -1,4 +1,7 @@
 # Browser
+
+![NPM](https://img.shields.io/npm/dt/@passmarked/browser.svg)
+
 Remote management client for browsers supporting the [ Chrome DevTools Protocol](https://chromedevtools.github.io/devtools-protocol/), built to be easy to use. And futher than that, be ready for production use. Currently being battle-tested over at [Passmarked](https://passmarked.com) before we launch.
 
 We've been quite excited for the developments allowing us to better use Chrome, and move away from PhantomJS (which has a ever aging version of webkit). After following the announcements we wanted to get ready for the switch and started building a library we would able to use in our production setup.
