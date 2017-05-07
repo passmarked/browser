@@ -58,7 +58,9 @@ yarn install add [--save] @passmarked/browser
 
 ### Run an instance of browser
 
-To use the library we need a browser instance we can connect to. As of writing this (6 May 2017) `--headless` is only available in Canary along with most of the required features to run the library. So first download and install [Chrome Canary](https://www.google.com/chrome/browser/desktop/).
+To use the library we need a browser instance we can connect to. As of writing this (6 May 2017) `--headless` is only available in Canary along with most of the required features to run the library. So first download and install [Chrome Canary](https://www.google.com/chrome/browser/canary.html).
+
+> Different Operating Systems will install the executable to seperate locations (unless done manually). One Mac OS (by default) this is `/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary`
 
 Then run using:
 
@@ -143,11 +145,7 @@ client.load({
   // render pdf
   page.render({
   
-    format:      'pdf', // pdf, png or jpeg
-    width:       320,
-    height:      480,
-    mobile:      true,
-    orientation: ''
+    format:      'pdf' // pdf, png or jpeg
   
   }, function(err, buf) {
   
