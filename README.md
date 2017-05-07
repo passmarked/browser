@@ -341,16 +341,6 @@ page.getDocument(function(err, doc) {
 });
 ```
 
-### page.getDocument(fn)
-
-Returns the raw request/response for the final page document:
-
-```nodejs
-page.getDocument(function(err, doc) { 
-  console.dir(doc)
-});
-```
-
 ### page.getMemoryUsage(fn)
 
 Returns the memory usage of the Heap in bytes.
@@ -399,7 +389,7 @@ page.exec(function(params) {
   return document.location.toString()
 }, {
   hello: 'world' // params to pass
-}, function(err, value) {
+}, function(err, exception, value) {
   console.log(value); // http://example.com
 });
 ```
