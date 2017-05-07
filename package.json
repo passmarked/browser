@@ -1,15 +1,22 @@
 {
   "name": "@passmarked/browser",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Easy to use remote browser control using the Chrome Dev Tools Debugging interface",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "contributors": [
+    "Johann du Toit <johann@passmarked.com>"
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.org:passmarked/browser.git"
   },
+  "bugs": {
+      "url": "https://github.com/passmarked/browser/issues"
+  },
+  "homepage": "https://github.com/passmarked/browser",
   "keywords": [
     "passmarked",
     "chrome",
