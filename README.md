@@ -82,6 +82,7 @@ As an example, to get you up and running quickly, here how to save a screenshot 
 
 ```nodejs
 // Gotta start somewhere !
+const fs = require('fs');
 const Browser = require('@passmarked/browser')
 
 /** 
@@ -145,12 +146,23 @@ client.load({
   // render pdf
   page.render({
   
-    format:      'pdf' // pdf, png or jpeg
+    format:      'png' // pdf, png or jpeg
   
   }, function(err, buf) {
+
+    // check for error
+    if(err) {
+
+      // nope ...
+      console.log('file write failed :(');
+
+      // done
+      return page.close();
+
+    }
   
     // write the buffer to file
-    fs.writeFile('output.pdf', buf, function() {
+    fs.writeFile('output.png', buf, function() {
     
       // close the context
       page.close();
