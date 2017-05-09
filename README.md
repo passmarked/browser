@@ -29,7 +29,7 @@ TODO:
 
 * [x] Add samples
 * [ ] Add proper logging with options
-* [ ] Add testing suite
+* [ ] Add testing suite [IN PROGRESS]
 * [ ] Testing after integration with our live system
 
 Current version - 0.0.1
