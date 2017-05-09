@@ -32,7 +32,7 @@ TODO:
 * [ ] Add testing suite [IN PROGRESS]
 * [ ] Testing after integration with our live system
 
-Current version - 0.0.5
+Current version - 0.0.6
 
 ### Production Status
 
