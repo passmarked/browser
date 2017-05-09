@@ -27,7 +27,7 @@ Currently building out and figuring out the API, will be ready for use in the ne
 
 TODO:
 
-* [ ] Add samples
+* [x] Add samples
 * [ ] Add proper logging with options
 * [ ] Add testing suite
 * [ ] Testing after integration with our live system
