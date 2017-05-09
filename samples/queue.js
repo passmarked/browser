@@ -60,8 +60,6 @@ async.each([
 
     cb(null);
 
-    page.getTimingOfDocument(function(err, buf) {
-
   });
 
 }, function() {
