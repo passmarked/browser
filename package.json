@@ -14,7 +14,7 @@
     "url": "git@github.org:passmarked/browser.git"
   },
   "bugs": {
-      "url": "https://github.com/passmarked/browser/issues"
+    "url": "https://github.com/passmarked/browser/issues"
   },
   "homepage": "https://github.com/passmarked/browser",
   "keywords": [
@@ -32,11 +32,12 @@
   "author": "Passmarked <info@passmarked.com>",
   "license": "Apache-2.0",
   "dependencies": {
-    
     "async": "^2.4.0",
     "chrome-remote-interface": "^0.22.0",
     "hex-rgb": "^1.0.0",
     "underscore": "^1.8.3"
-
+  },
+  "devDependencies": {
+    "mocha": "^3.3.0"
   }
 }
