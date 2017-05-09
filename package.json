@@ -1,6 +1,6 @@
 {
   "name": "@passmarked/browser",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Easy to use remote browser control using the Chrome Dev Tools Debugging interface",
   "main": "index.js",
   "scripts": {
