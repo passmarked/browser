@@ -1,29 +1,29 @@
-# Browser
+# Browser Client
 
 ![NPM](https://img.shields.io/npm/dt/@passmarked/browser.svg)
 
 Remote management client for browsers supporting the [ Chrome DevTools Protocol](https://chromedevtools.github.io/devtools-protocol/), built to be easy to use. And further than that, be ready for production use. Currently being battle-tested over at [Passmarked](https://passmarked.com) before we launch.
 
-We've been quite excited about the developments allowing us to better use Chrome and move away from PhantomJS (which has a ever aging version of webkit). After following the announcements we wanted to get ready for the switch and started building a library we would able to use in our production setup.
+We've been quite excited about the developments allowing us to better use Chrome and move away from PhantomJS (which has an ever ageing version of WebKit). After following the announcements we wanted to get ready for the switch and started building a library we would able to use in our production setup.
 
 We set out with a few goals:
 
 * Learn from [PhantomJs](https://phantomjs.org) which we have been using for over a year now and address issues we had.
-* Layout the API in a way similiar to a simple HTTP client like [request](https://github.com/request/request) to reduce the barrier of entry for everyone.
+* Layout the API in a way similar to a simple HTTP client like [request](https://github.com/request/request) to reduce the barrier of entry for everyone.
 * Built from the ground up to support parallel processing and keeping a long running instance sane by cleaning up every chance it gets.
-* Built in configurable queue-ing to make it easy to build systems that won't fall over once traffic starts hitting.
+* Built-in configurable queueing to make it easy to build systems that won't fall over once traffic starts hitting.
 * Keeping it generic enough to use multiple browsers supporting the same protocol.
-* Build generic convience methods to get information users are normally interested in. Such as building a HAR, taking screenshots, emulation and in page code execution (much like [PhantomJs](https://phantomjs.org)).
+* Build generic convenience methods to get information users are normally interested in. Such as building a HAR, taking screenshots, emulation and in page code execution (much like [PhantomJs](https://phantomjs.org)).
 
 Join our [Slack](http://passmarked.com/chat) channel to join the conversation and help us build this out.
 
 ## Status
 
-As you might know, tons of features like the `--headless` feature from Chrome is still only in Canary. It will be released to the mainline stream in the next release. **With a growing list of features following.**
+As you might know, tonnes of features like the `--headless` feature from Chrome is still only in Canary. It will be released to the mainline stream in the next release. **With a growing list of features following.**
 
 ### Development Status
 
-Currently building out and figuring out the API, will be ready for use in the next week. Current release does work, API might just be tweaked a bit after usage.
+Currently building out and figuring out the API, will be ready for use in the next week. The current release does work, API might just be tweaked a bit after usage.
 
 TODO:
 
@@ -36,7 +36,7 @@ Current version - 0.0.1
 
 ### Production Status
 
-The module is currently being tested for use in our website testing suite at [Passmarked](https://passmarked.com), which we hope to have out of beta in the next few weeks and running Chrome in headless mode. Expect tons of updates and performance enhancements.
+The module is currently being tested for use in our website testing suite at [Passmarked](https://passmarked.com), which we hope to have out of beta in the next few weeks and running Chrome in headless mode. Expect tonnes of updates and performance enhancements.
 
 Join our [Slack](http://passmarked.com/chat) channel to join the conversation and help us build this out.
 
@@ -60,7 +60,7 @@ yarn install add [--save] @passmarked/browser
 
 To use the library we need a browser instance we can connect to. As of writing this (6 May 2017) `--headless` is only available in Canary along with most of the required features to run the library. So first download and install [Chrome Canary](https://www.google.com/chrome/browser/canary.html).
 
-> Different Operating Systems will install the executable to seperate locations (unless done manually). On Mac OS (by default) this is `/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary`
+> Different Operating Systems will install the executable to separate locations (unless done manually). On Mac OS (by default) this is `/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary`
 
 Then run using:
 
@@ -68,11 +68,11 @@ Then run using:
 google-chrome-canary [--headless] --disable-gpu --remote-debugging-port=9222
 ```
 
-Using `--headless` will allow a server to run an instance of the browser, or simply on your desktop without showing an actual browser. No **xvfb** needed !
+Using `--headless` will allow a server to run an instance of the browser, or simply on your desktop without showing an actual browser. No **xvfb** needed!
 
 #### Notable mentions:
 
-* It seems at the moment Chrome only allows connections from `localhost`, (being careful off course) you can open up to an ip using a reverse proxy like NGINX. See [samples/nginx.conf](https://github.com/passmarked/browser/blob/master/samples/nginx.conf) for a sample NGINX config.
+* It seems at the moment Chrome only allows connections from `localhost`, (being careful of course, really careful ...) you can open up to an external IP using a reverse proxy like NGINX. See [samples/nginx.conf](https://github.com/passmarked/browser/blob/master/samples/nginx.conf) for a sample NGINX config.
 * For security reasons Chrome does not return the amount of memory being used precisely. To enable and use the `page.getMemory()` function, add `--enable-precise-memory-info`.
 * For now `--disable-gpu` is required in `--headless` mode as issues are being sorted out.
 
@@ -99,7 +99,7 @@ var client = Browser({
 });
 
 /**
-* Load a page with the specified url and options.
+* Load a page with the specified URL and options.
 * See #Options for all possible config options.
 **/
 
@@ -191,7 +191,7 @@ These options apply only when creating a browser client:
 
 ### Browser/Page Options
 
-Options that can be applied to pages being loaded which control how it looks/feels. Options can be supplied to both the browser and the `.load()` function, where `.load()` will default to the browser options and will override when passed anything in the `.load()` method itself.
+Options that can be applied to pages being loaded which control how it looks/feels. Options can be supplied to both the browser and the `.load()` function, where `.load()` will default to the browser options and will override when passed anything in the `.load()` the method itself.
 
 * **url** - URL to load
 * **timeout** - Number of ms before stopping and returning a "timeout" error - default no limit
@@ -228,9 +228,9 @@ const Browser = require('@passmarked/browser');
 var browser = Browser({ ... options ... });
 ```
 
-Options provided for the browser will be the default for all pages loaded in that browser, unless overridden by the `.load()` calls themselves.
+Options provided for the browser will be the default for all pages loaded in that browser, unless overridden by the `.load()` calls them.
 
-> The browser client does not maintain a connection to Chrome instances, rather it simply saves the options and connects as needed. Each page context is a websocket connection being used to control the remote browser.
+> The browser client does not maintain a connection to Chrome instances, rather it simply saves the options and connects as needed. Each page context is a web socket connection being used to control the remote browser.
 
 ### browser.load(options, fn)
 
@@ -238,21 +238,21 @@ Creates a page context that can be interacted with. When created the context is 
 
 ```
 browser.load({ ... options ... }, function(err, page) {
-	page <- the context for the page
+    page <- the context for the page
 });
 ```
 
-The function will use any options defined when creating the browser connection, but any of those options can also be overrided here:
+The function will use any options defined when creating the browser connection, but any of those options can also be overridden here:
 
 ```
 browser.load({ ... options ... }, function(err, page) {
-	page <- the context for the page
+    page <- the context for the page
 });
 ```
 
 ### page.close()
 
-Closes the context and adds the tab back to pool, which will cause the next url specified to load. This must be called to continue processing once you are done with a page. The function also handles cleaning up and closing the connections while flushing stale tabs once they idle again.
+Closes the context and adds the tab back to pool, which will cause the next URL specified to load. This must be called to continue processing once you are done with a page. The function also handles cleaning up and closing the connections while flushing stale tabs once they idle again.
 
 ```nodejs
 page.close()
@@ -265,11 +265,11 @@ Returns the result of trying to connect to the specified URL which is either:
 * **success** - All is good. Was able to connect and found a document to respond. Not to be confused with HTTP status. This could be any status code just as long as we are able to load the page in Chrome without connection problems.
 * **insecure** - There was an issue connecting due to HTTPS/SSL - see #ignoreSSL under #Options to disable checking
 * **timeout** - The configured timeout was exceeded
-* **failed** - We are just not able to connect to the specified url
+* **failed** - We are just not able to connect to the specified URL
 
 ## Page Functions
 
-The module also provides quite a few convience functions that can be accessed once a page context has be retrieved:
+The module also provides quite a few convenience functions that can be accessed once a page context has to be retrieved:
 
 ### page.getURL(fn)
 
@@ -359,16 +359,16 @@ Renders out the page in various formats, with options to emulate various sizes a
 ```nodejs
 page.render({
 
-	format: 'png', // REQUIRED - jpeg, png or pdf
-	quality: 30, // OPTIONAL - quality of jpeg produced, default 100
-	
-	// OPTIONAL Emulation Settings
-	width: 320, // width of page
-	height: 420, // height of page - null = till the bottom
-	scale: 1, // scale factor of viewport
-	orientation: 'portraitPrimary',
-	media: 'print', // emulate a @media query media
-	
+    format: 'png', // REQUIRED - jpeg, png or pdf
+    quality: 30, // OPTIONAL - quality of jpeg produced, default 100
+    
+    // OPTIONAL Emulation Settings
+    width: 320, // width of page
+    height: 420, // height of page - null = till the bottom
+    scale: 1, // scale factor of viewport
+    orientation: 'portraitPrimary',
+    media: 'print', // emulate a @media query media
+    
 }, {
   hello: 'world' // params to pass
 }, function(err, value) {
