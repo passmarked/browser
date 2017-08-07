@@ -404,15 +404,20 @@ page.getHAR(function(err, har) {
 });
 ```
 
-### page.getContent(fn)
+### page.getContent(boolean, fn)
 
 Returns the content (after executing javascript) of the page:
 
 ```nodejs
-page.getContent(function(err, content) { 
+page.getContent(true, function(err, content) { 
   console.log(content);
 });
 ```
+
+The boolean defines if the content should be the output of Javascript executation or simply what was returned by the server:
+
+* `true` to return the content of the page as rendered by Javascript, can be used
+* `false` return the content of the as returned by the server itself without any client-side execution.
 
 ### page.getSize(fn)
 
