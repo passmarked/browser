@@ -33,7 +33,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "async": "^2.5.0",
-    "chrome-remote-interface": "^0.25.1",
+    "chrome-remote-interface": "^0.25.2",
     "hex-rgb": "^1.0.0",
     "node-uuid": "^1.4.8",
     "underscore": "^1.8.3"
